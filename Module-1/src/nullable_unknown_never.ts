@@ -32,6 +32,6 @@ getMyCarSpeed(true) //
 function throwError(message: string):never {
     throw new Error(message)
 }
-throwError('bhai sorry error hoyeche')
+// throwError('bhai sorry error hoyeche')
 
 
