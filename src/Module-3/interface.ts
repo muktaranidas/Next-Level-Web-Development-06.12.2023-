@@ -2,7 +2,7 @@ type User = {
     name: string;
     age: number;
 }
-type extendedUser = {
+type extendedUser = User &  {
     role:string
 }
 interface IUser{
