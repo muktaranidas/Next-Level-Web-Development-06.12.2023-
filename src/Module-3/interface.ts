@@ -10,12 +10,12 @@ interface IUser{
     age: number;
 }
 interface IExtendedUser extends IUser{
-    roll:string
+    role:string
 }
 const userr: IExtendedUser = {
     name: 'mukta',
     age: 400,
-    roll:'Unknown'
+    role:'Unknown'
 }
 
 const userWithTypeAlias: User = {
