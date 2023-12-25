@@ -2,9 +2,9 @@ import express from 'express'
 // const express = require('express')
 import mongoose from 'mongoose'
 // const mongoose = require('mongoose');
-const app = express()+gggg
+const app = express()+
 const port = 5000
-//database connection
+// database connectionng
 async function bootstrap() {
     try {
       await mongoose.connect('mongodb://127.0.0.1:27017/practice-mongoose');
