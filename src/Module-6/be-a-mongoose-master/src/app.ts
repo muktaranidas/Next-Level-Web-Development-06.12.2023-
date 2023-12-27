@@ -95,12 +95,30 @@ app.get("/", (req: Request, res: Response, next: NextFunction) => {
             type: String,
             required:true,
         },
+    });
+    const User = model<IUser>('User', userSchema);
+    const createUserToDB = async () => {
+        const user = new User({
+            id: '777',
+            role: "student",
+            password: "Jhakanaka",
+            name: {
+                firstName: "Mukta",
+                middleName: "Thakur",
+                lastName: "Meghla",
+            },
+            // dateOfBirth?: "07.04.1998",
+            gender: "male",
+            email: "mukta.meghla123@gmail.com",
+            contactNo: "01302564259",
+            emergencyContactNo: "018000000",
+            presentAddress: "Dhaka",
+            permanentAddress: "Kuti",
 
-  
-});
-
-
-    // res.send("Hello World");
-    // next()
+        });
+        await user.save();
+        console.log(user);
+    } 
+    createUserToDB()
 })
 export default app;
