@@ -15,4 +15,8 @@
         presentAddress: string;
         permanentAddress: string;
 
-    }
+}
+// Put all user instance methods in this interface:
+export interface IUserMethods {
+  fullName(): string;
+}
