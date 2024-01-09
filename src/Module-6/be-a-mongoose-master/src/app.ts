@@ -122,3 +122,6 @@ app.get("/", (req: Request, res: Response, next: NextFunction) => {
     createUserToDB()
 })
 export default app;
+
+
+// pattern MVC , Modular
