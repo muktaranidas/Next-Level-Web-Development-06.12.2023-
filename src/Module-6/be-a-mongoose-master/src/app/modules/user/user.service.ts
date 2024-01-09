@@ -1,3 +1,4 @@
+// import {  } from './user.service';
 import { IUser } from "./user.interface";
 import User from "./user.model";
 export const createUserToDB = async (payload: IUser): Promise<IUser> => {
@@ -15,7 +16,12 @@ export const getUserByIdFromDb =async (payload: string):Promise<IUser | null> =>
     const user = await User.findOne({ id: payload },{name:1,contactNo:1})
     return user; 
 }
-export const getAdminUsersFromDB =async (payload: string):Promise<IUser | null> => {
-    const user1 =  new User() // static User.
-    return user; 
+export const getAdminUsersFromDB =async () => {
+    const admins = await User.getAdminUsers()
+    return admins;
 }
+
+// class -> attach -> Method -> Directly call using class
+//user = new user
+// user.   instance methods
+// User.getAdminUsers()
