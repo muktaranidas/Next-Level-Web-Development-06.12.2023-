@@ -6,8 +6,6 @@ const router = express.Router();
 /:admins
 /:id    dynamic
 
-
-
  */
 
 router.get('/', getUsers);
